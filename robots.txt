@@ -1,0 +1,31 @@
+# robots.txt — SoydeJux
+# Cultura, Costumbres y Tradiciones de la Mixteca
+# https://yourusername.github.io/soydeJux/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourusername.github.io/soydeJux/sitemap.xml
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (optional - reduces server load)
+Crawl-delay: 10
+
+# Host
+Host: yourusername.github.io

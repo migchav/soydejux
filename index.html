@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoydeJux — Cultura, Costumbres y Tradiciones de la Mixteca</title>
+  <meta name="description" content="SoydeJux es un portal dedicado a la cultura, costumbres y tradiciones de la región Mixteca de Oaxaca, México. Descubre historia, gastronomía, artesanías y más.">
+  <meta name="keywords" content="Mixteca, Oaxaca, cultura mixteca, tradiciones, Juxtlahuaca, SoydeJux, artesanías, gastronomía oaxaqueña, historia prehispánica, mesoamérica">
+  <meta name="author" content="Miguel Chavez - SoydeJux.org">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Spanish">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourusername.github.io/soydeJux/">
+  <meta property="og:title" content="SoydeJux — Cultura, Costumbres y Tradiciones">
+  <meta property="og:description" content="Portal de la cultura mixteca de Oaxaca. Historia, tradiciones, gastronomía y arte de la región.">
+  <meta property="og:locale" content="es_MX">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SoydeJux — Cultura Mixteca de Oaxaca">
+  <meta name="twitter:description" content="Cultura, Costumbres y Tradiciones de la región Mixteca de Oaxaca.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yourusername.github.io/soydeJux/">
+
+  <!-- Favicon (emoji fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏺</text></svg>">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SoydeJux",
+    "url": "https://yourusername.github.io/soydeJux/",
+    "description": "Portal cultural de la región Mixteca de Oaxaca",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yourusername.github.io/soydeJux/pages/buscar.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    /* Home-specific */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .feature-item {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: white;
+      border-radius: 4px;
+      box-shadow: var(--shadow-soft);
+      border-top: 3px solid var(--color-ocre);
+      transition: var(--transition);
+    }
+    .feature-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-mid); }
+    .feature-icon { font-size: 2.5rem; margin-bottom: 0.8rem; display: block; }
+    .feature-item h3 { font-family: var(--font-titulo); font-size: 0.9rem; color: var(--color-cafe); letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+    .feature-item p { font-size: 0.83rem; color: var(--color-piedra); }
+    .feature-link { display: inline-block; margin-top: 0.8rem; font-size: 0.8rem; color: var(--color-ocre); text-decoration: none; font-weight: 600; }
+    .feature-link:hover { text-decoration: underline; }
+
+    .welcome-text { font-size: 1.1rem; max-width: 720px; }
+    .welcome-text p { margin-bottom: 1.2rem; }
+
+    .stats-row {
+      display: flex; gap: 2rem; flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+    .stat-item { text-align: center; }
+    .stat-number { font-family: var(--font-titulo); font-size: 2.2rem; color: var(--color-ocre); display: block; }
+    .stat-label { font-size: 0.78rem; color: var(--color-piedra); letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .quote-hero {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: var(--color-humo);
+      border-top: 1px solid var(--color-arena);
+      border-bottom: 1px solid var(--color-arena);
+    }
+    .quote-hero blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-style: italic;
+      color: var(--color-cafe);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .quote-hero cite {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--color-tierra);
+      font-style: normal;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <span>📍 Región Mixteca, Oaxaca, México</span>
+  <div class="top-social">
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-icon">🏺</div>
+    <div class="logo-text">
+      <h1>SoydeJux</h1>
+      <span>Cultura, Costumbres y Tradiciones</span>
+    </div>
+  </a>
+
+  <div class="search-wrap">
+    <input type="search" placeholder="Buscar en SoydeJux..." readonly data-search-open>
+    <button class="search-btn" data-search-open aria-label="Buscar"><i class="fas fa-search"></i></button>
+  </div>
+
+  <button class="hamburger" aria-label="Menú">☰</button>
+</header>
+
+<!-- NAV -->
+<nav class="main-nav" aria-label="Navegación principal">
+  <div class="nav-container">
+    <div class="nav-item">
+      <a href="index.html" class="nav-link">🏠 Inicio</a>
+    </div>
+    <div class="nav-item">
+      <a href="pages/historia.html" class="nav-link">Historia <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="pages/historia.html#origenes">Orígenes de la Mixteca</a>
+        <a href="pages/historia.html#civilizacion">Civilización Mixteca</a>
+        <a href="pages/historia.html#conquista">Conquista y Colonia</a>
+        <a href="pages/historia.html#independencia">Época Moderna</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="pages/tradiciones.html" class="nav-link">Tradiciones <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="pages/tradiciones.html#guelaguetza">Guelaguetza</a>
+        <a href="pages/tradiciones.html#muertos">Día de Muertos</a>
+        <a href="pages/tradiciones.html#carnaval">Carnaval</a>
+        <a href="pages/tradiciones.html#fiestas">Fiestas Patronales</a>
+        <a href="pages/vestimenta.html">Vestimenta Típica</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="pages/gastronomia.html" class="nav-link">Gastronomía <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="pages/gastronomia.html#moles">Los Siete Moles</a>
+        <a href="pages/gastronomia.html#platillos">Platillos Típicos</a>
+        <a href="pages/gastronomia.html#bebidas">Bebidas Tradicionales</a>
+        <a href="pages/gastronomia.html#postres">Dulces y Postres</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="pages/artesanias.html" class="nav-link">Arte y Artesanías <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="pages/artesanias.html#alebrijes">Alebrijes</a>
+        <a href="pages/artesanias.html#tapetes">Tapetes de Lana</a>
+        <a href="pages/artesanias.html#joyeria">Joyería en Oro</a>
+        <a href="pages/artesanias.html#ceramica">Barro Negro</a>
+        <a href="pages/musica.html">Música Tradicional</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="pages/lengua.html" class="nav-link">Lengua <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="pages/lengua.html#mixteco">El Mixteco</a>
+        <a href="pages/lengua.html#variantes">Variantes Dialectales</a>
+        <a href="pages/lengua.html#frases">Frases Comunes</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="pages/municipios.html" class="nav-link">Municipios <span class="arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="pages/municipios.html#huajuapan">Huajuapan de León</a>
+        <a href="pages/municipios.html#tlaxiaco">Tlaxiaco</a>
+        <a href="pages/municipios.html#juxtlahuaca">Juxtlahuaca</a>
+        <a href="pages/municipios.html#silacayoapan">Silacayoapan</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a href="pages/galeria.html" class="nav-link">Galería</a>
+    </div>
+    <div class="nav-item">
+      <a href="pages/sitemap.html" class="nav-link">Mapa del Sitio</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MIXTEC BORDER -->
+<div class="mixtec-border"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">✦ Región Mixteca · Oaxaca · México ✦</p>
+    <h2>Raíces que <em>florecen</em><br>en cada generación</h2>
+    <p>Descubre la riqueza cultural, las costumbres ancestrales y las tradiciones vivas de la Mixteca — tierra de pueblos guerreros, artistas y sabios.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href="pages/historia.html" class="btn btn-primary">🏛 Conoce la Historia</a>
+      <a href="pages/tradiciones.html" class="btn btn-outline">🎭 Ver Tradiciones</a>
+    </div>
+  </div>
+</section>
+
+<div class="mixtec-border"></div>
+
+<!-- QUOTE -->
+<div class="quote-hero">
+  <blockquote>
+    "El pueblo que desconoce su historia está condenado a repetirla;<br>
+    el que la conoce, puede moldear su destino."
+  </blockquote>
+  <cite>— Sabiduría Mixteca</cite>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="page-wrapper">
+  <main>
+    <!-- BIENVENIDA -->
+    <section class="section-header">
+      <span class="label">Bienvenidos</span>
+      <h2>La Mixteca: Corazón de Mesoamérica</h2>
+      <div class="section-divider"></div>
+    </section>
+
+    <div class="welcome-text">
+      <p>
+        La <strong>región Mixteca de Oaxaca</strong> es una de las zonas culturales más ricas y antiguas de México. 
+        Con una historia que se remonta a más de tres mil años, los pueblos mixtecos desarrollaron una de las 
+        civilizaciones más sofisticadas del mundo prehispánico: un sistema de escritura propio, arquitectura monumental, 
+        orfebrería incomparable y una cosmovisión profunda sobre el universo.
+      </p>
+      <p>
+        Hoy, la Mixteca sigue viva en sus mercados, en las notas de la música de banda, en el tejido de los 
+        tapetes de lana, en el aroma del mole negro y en el sonido del mixteco, una lengua que desafía al tiempo.
+        <strong>SoydeJux</strong> es el espacio donde esas raíces se celebran, se documentan y se comparten con el mundo.
+      </p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-item"><span class="stat-number">570+</span><span class="stat-label">Municipios</span></div>
+      <div class="stat-item"><span class="stat-number">3,000</span><span class="stat-label">Años de historia</span></div>
+      <div class="stat-item"><span class="stat-number">50+</span><span class="stat-label">Variantes del mixteco</span></div>
+      <div class="stat-item"><span class="stat-number">7</span><span class="stat-label">Moles Oaxaqueños</span></div>
+    </div>
+
+    <!-- MINI GALLERY -->
+    <div class="mini-gallery" tabindex="0" aria-label="Galería de imágenes de la Mixteca">
+      <div class="gallery-stage">
+        <div class="gallery-slide active">
+          <div class="img-placeholder" style="background:linear-gradient(135deg,#5C3D2E,#8B6F47);">
+            <span class="icon">🏛</span>
+            <span class="label">Monte Albán — Vista panorámica</span>
+          </div>
+        </div>
+        <div class="gallery-slide">
+          <div class="img-placeholder" style="background:linear-gradient(135deg,#6B7C61,#5C3D2E);">
+            <span class="icon">🎭</span>
+            <span class="label">Guelaguetza — Danza de la Pluma</span>
+          </div>
+        </div>
+        <div class="gallery-slide">
+          <div class="img-placeholder" style="background:linear-gradient(135deg,#A0704A,#2C2416);">
+            <span class="icon">🏺</span>
+            <span class="label">Artesanías de barro negro mixteco</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-caption" id="cap-home">Monte Albán — Zona arqueológica, Patrimonio de la Humanidad</div>
+      <div class="gallery-controls">
+        <button class="gallery-btn gallery-prev" aria-label="Anterior">‹</button>
+        <div class="gallery-dots">
+          <button class="gallery-dot active" aria-label="Imagen 1"></button>
+          <button class="gallery-dot" aria-label="Imagen 2"></button>
+          <button class="gallery-dot" aria-label="Imagen 3"></button>
+        </div>
+        <span class="gallery-counter">1 / 3</span>
+        <button class="gallery-btn gallery-next" aria-label="Siguiente">›</button>
+      </div>
+    </div>
+
+    <!-- SECCIONES PRINCIPALES -->
+    <section style="margin-top:3rem;">
+      <div class="section-header">
+        <span class="label">Explora</span>
+        <h2>Secciones del Portal</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <span class="feature-icon">🏛</span>
+          <h3>Historia</h3>
+          <p>Orígenes, civilización y legado del pueblo mixteco.</p>
+          <a href="pages/historia.html" class="feature-link">Ver más →</a>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🎭</span>
+          <h3>Tradiciones</h3>
+          <p>Festividades, danzas y rituales que nos definen.</p>
+          <a href="pages/tradiciones.html" class="feature-link">Ver más →</a>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🍲</span>
+          <h3>Gastronomía</h3>
+          <p>Los sabores únicos de la cocina mixteca oaxaqueña.</p>
+          <a href="pages/gastronomia.html" class="feature-link">Ver más →</a>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🎨</span>
+          <h3>Artesanías</h3>
+          <p>Arte textil, cerámica y orfebrería mixteca.</p>
+          <a href="pages/artesanias.html" class="feature-link">Ver más →</a>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🗣</span>
+          <h3>Lengua</h3>
+          <p>El mixteco: una lengua viva con miles de años.</p>
+          <a href="pages/lengua.html" class="feature-link">Ver más →</a>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🗺</span>
+          <h3>Municipios</h3>
+          <p>Comunidades, cabeceras y sus particularidades.</p>
+          <a href="pages/municipios.html" class="feature-link">Ver más →</a>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🎵</span>
+          <h3>Música</h3>
+          <p>Sones, chilenas y bandas del istmo mixteco.</p>
+          <a href="pages/musica.html" class="feature-link">Ver más →</a>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">👗</span>
+          <h3>Vestimenta</h3>
+          <p>Trajes bordados y la identidad en la tela.</p>
+          <a href="pages/vestimenta.html" class="feature-link">Ver más →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section style="margin-top:3rem;">
+      <div class="section-header">
+        <span class="label">Contenido destacado</span>
+        <h2>Artículos Recientes</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="cards-grid">
+        <a href="pages/tradiciones.html#guelaguetza" class="card">
+          <div class="card-thumb" style="background:linear-gradient(135deg,#8B6F47,#C8922A);">🎭</div>
+          <div class="card-body">
+            <span class="card-tag">Tradiciones</span>
+            <h3>La Guelaguetza: Fiesta de los Lunes del Cerro</h3>
+            <p>Celebración indígena que reúne a los ocho pueblos de Oaxaca en un espectáculo de danza y música.</p>
+          </div>
+          <div class="card-footer"><span>Tradiciones · Julio</span><span class="read-more">Leer →</span></div>
+        </a>
+        <a href="pages/gastronomia.html#moles" class="card">
+          <div class="card-thumb" style="background:linear-gradient(135deg,#5C3D2E,#A0704A);">🍲</div>
+          <div class="card-body">
+            <span class="card-tag">Gastronomía</span>
+            <h3>Los Siete Moles Oaxaqueños: Herencia y Sabor</h3>
+            <p>El mole negro, coloradito, amarillo, rojo, verde, chichilo y manchamanteles.</p>
+          </div>
+          <div class="card-footer"><span>Gastronomía</span><span class="read-more">Leer →</span></div>
+        </a>
+        <a href="pages/artesanias.html#tapetes" class="card">
+          <div class="card-thumb" style="background:linear-gradient(135deg,#6B7C61,#5C3D2E);">🎨</div>
+          <div class="card-body">
+            <span class="card-tag">Artesanías</span>
+            <h3>Tapetes de Lana: Arte Tejido con Magia</h3>
+            <p>Los tejedores de Teotitlán del Valle crean tapetes con técnica prehispánica y tintes naturales.</p>
+          </div>
+          <div class="card-footer"><span>Arte Textil</span><span class="read-more">Leer →</span></div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="widget">
+      <div class="widget-header">🔍 Búsqueda Rápida</div>
+      <div class="widget-body">
+        <button class="btn btn-primary" style="width:100%;justify-content:center;" data-search-open>
+          <i class="fas fa-search"></i> Buscar en SoydeJux
+        </button>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="widget-header">📌 Secciones</div>
+      <div class="widget-body">
+        <ul class="widget-list">
+          <li><a href="pages/historia.html">Historia de la Mixteca</a></li>
+          <li><a href="pages/tradiciones.html">Tradiciones y Festividades</a></li>
+          <li><a href="pages/gastronomia.html">Gastronomía Mixteca</a></li>
+          <li><a href="pages/artesanias.html">Arte y Artesanías</a></li>
+          <li><a href="pages/lengua.html">Lengua Mixteca</a></li>
+          <li><a href="pages/municipios.html">Municipios y Comunidades</a></li>
+          <li><a href="pages/musica.html">Música Tradicional</a></li>
+          <li><a href="pages/vestimenta.html">Vestimenta Típica</a></li>
+          <li><a href="pages/galeria.html">Galería Fotográfica</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="widget-header">🏷 Etiquetas</div>
+      <div class="widget-body">
+        <div class="tag-cloud">
+          <a href="#" class="tag">Mixteca</a>
+          <a href="#" class="tag">Oaxaca</a>
+          <a href="#" class="tag">Cultura</a>
+          <a href="#" class="tag">Tradiciones</a>
+          <a href="#" class="tag">Gastronomía</a>
+          <a href="#" class="tag">Arte</a>
+          <a href="#" class="tag">Mixteco</a>
+          <a href="#" class="tag">Juxtlahuaca</a>
+          <a href="#" class="tag">Guelaguetza</a>
+          <a href="#" class="tag">Prehispánico</a>
+          <a href="#" class="tag">Mesoamérica</a>
+          <a href="#" class="tag">Artesanías</a>
+          <a href="#" class="tag">Mole</a>
+          <a href="#" class="tag">Danza</a>
+          <a href="#" class="tag">Historia</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="widget-header">📱 Redes Sociales</div>
+      <div class="widget-body">
+        <div style="display:flex;flex-direction:column;gap:0.7rem;">
+          <a href="https://facebook.com" target="_blank" style="display:flex;align-items:center;gap:10px;color:#1877F2;text-decoration:none;font-family:var(--font-cuerpo);font-size:0.9rem;padding:8px;border-radius:4px;background:#F0F2F5;">
+            <i class="fab fa-facebook-f" style="width:18px;text-align:center;"></i> Facebook — SoydeJux
+          </a>
+          <a href="https://youtube.com" target="_blank" style="display:flex;align-items:center;gap:10px;color:#FF0000;text-decoration:none;font-family:var(--font-cuerpo);font-size:0.9rem;padding:8px;border-radius:4px;background:#FFF0F0;">
+            <i class="fab fa-youtube" style="width:18px;text-align:center;"></i> YouTube — SoydeJux
+          </a>
+          <a href="https://instagram.com" target="_blank" style="display:flex;align-items:center;gap:10px;color:#E1306C;text-decoration:none;font-family:var(--font-cuerpo);font-size:0.9rem;padding:8px;border-radius:4px;background:#FFF0F5;">
+            <i class="fab fa-instagram" style="width:18px;text-align:center;"></i> Instagram — SoydeJux
+          </a>
+          <a href="https://tiktok.com" target="_blank" style="display:flex;align-items:center;gap:10px;color:#000;text-decoration:none;font-family:var(--font-cuerpo);font-size:0.9rem;padding:8px;border-radius:4px;background:#F5F5F5;">
+            <i class="fab fa-tiktok" style="width:18px;text-align:center;"></i> TikTok — SoydeJux
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="widget-header">🌎 Sobre la Mixteca</div>
+      <div class="widget-body">
+        <p style="font-size:0.88rem;color:var(--color-sombra);line-height:1.7;">
+          La Mixteca es una región cultural que abarca partes de Oaxaca, Puebla y Guerrero. 
+          Su nombre deriva del náhuatl <em>"Mixtlan"</em>, "lugar de nubes". 
+          Los mixtecos la llaman <em>"Ñuu Dzaui"</em>, "pueblo de la lluvia".
+        </p>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Búsqueda">
+  <div class="search-modal">
+    <div class="search-modal-header">
+      <i class="fas fa-search" style="color:var(--color-tierra);"></i>
+      <input type="search" id="searchInput" placeholder="Buscar cultura, tradiciones, gastronomía..." autocomplete="off">
+      <button class="search-close" id="searchClose" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="search-results" id="searchResults">
+      <p style="color:var(--color-piedra);font-size:0.9rem;">Escribe para buscar en SoydeJux...</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo-wrap" style="margin-bottom:1rem;">
+        <div class="logo-icon">🏺</div>
+        <div class="logo-text">
+          <h1 style="font-size:1.2rem;">SoydeJux</h1>
+          <span>Cultura, Costumbres y Tradiciones</span>
+        </div>
+      </a>
+      <p>Portal dedicado a preservar y difundir la cultura, costumbres y tradiciones de la región Mixteca de Oaxaca, México. Un espacio para celebrar la identidad de nuestros pueblos.</p>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://youtube.com" target="_blank" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://instagram.com" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://tiktok.com" target="_blank" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Cultura</h4>
+      <ul>
+        <li><a href="pages/historia.html">Historia</a></li>
+        <li><a href="pages/tradiciones.html">Tradiciones</a></li>
+        <li><a href="pages/lengua.html">Lengua Mixteca</a></li>
+        <li><a href="pages/vestimenta.html">Vestimenta</a></li>
+        <li><a href="pages/musica.html">Música</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Arte y Sabor</h4>
+      <ul>
+        <li><a href="pages/gastronomia.html">Gastronomía</a></li>
+        <li><a href="pages/artesanias.html">Artesanías</a></li>
+        <li><a href="pages/galeria.html">Galería</a></li>
+        <li><a href="pages/municipios.html">Municipios</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Sitio</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="pages/sitemap.html">Mapa del Sitio</a></li>
+        <li><a href="robots.txt">robots.txt</a></li>
+        <li><a href="sitemap.xml">Sitemap XML</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2024 <strong>SoydeJux</strong> — Cultura, Costumbres y Tradiciones</div>
+    <div class="footer-credit">
+      Creado con <span>♥</span> por
+      <strong>Miguel Chavez</strong> · 
+      <a href="https://soydeJux.org" target="_blank">SoydeJux.org</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

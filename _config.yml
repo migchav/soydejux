@@ -1,0 +1,22 @@
+# SoydeJux — GitHub Pages Configuration
+# Cultura, Costumbres y Tradiciones de la Mixteca
+
+title: SoydeJux
+description: "Cultura, Costumbres y Tradiciones de la región Mixteca de Oaxaca, México"
+author: "Miguel Chavez"
+url: "https://yourusername.github.io"
+baseurl: "/soydeJux"
+
+# Build settings
+markdown: kramdown
+theme: null
+
+# Plugins
+plugins: []
+
+# Exclude from build
+exclude:
+  - generate_pages.sh
+  - "*.sh"
+  - README.md
+  - .gitignore
